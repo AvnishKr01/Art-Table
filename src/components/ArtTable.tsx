@@ -11,7 +11,7 @@ export default function ArtTable() {
     const [totalRecords, setTotalRecords] = useState(0);
     const [loading, setLoading] = useState(false);
 
-    const [page, setPage] = useState(0); // PrimeReact is 0-based
+    const [page, setPage] = useState(0);
     const [selectedRows, setSelectedRows] = useState<Artwork[]>([]);
 
     useEffect(() => {
@@ -44,7 +44,6 @@ export default function ArtTable() {
             onSelectionChange={(e) => setSelectedRows(e.value)}
             selectionMode="checkbox"
             dataKey="id"
-        //   responsiveLayout="scroll"
         >
             <Column selectionMode="multiple" headerStyle={{ width: "3rem" }} />
             <Column field="title" header="Title" />
